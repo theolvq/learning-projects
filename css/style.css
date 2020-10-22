@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(248,248,255,1) ;
+}
+
+/* responsive square grid  */
+.container {
+    width: 960px;
+    height: 500px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.square {
+    position: relative;
+    border: 1px solid black;
+    /* flex-basis: 6.25%; */
+}
+
+.square::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+
+ .title {
+    text-align: center;
+}
+
+/* .square {
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;	
+}
+
+.container {
+    height: 500px;
+    width: 960px;
+    font-size: 0;
+    margin: auto;
+} */
