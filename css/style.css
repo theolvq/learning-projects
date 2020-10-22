@@ -1,0 +1,41 @@
+body {
+    color: grey;
+    font-family: 'Roboto';
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;    
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button {
+    position: relative;
+    flex-basis: 30%;
+    border: 1px solid;
+    background-size: cover;
+    border-radius: 5%;
+}
+
+button::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+
+#rock {
+    background-image: url(file:///C:/Users/theol/Documents/Learning%20code/The%20Odin%20Project/rock-paper-scissor/img/rock.png);
+}
+
+#paper {
+    background-image: url(file:///C:/Users/theol/Documents/Learning%20code/The%20Odin%20Project/rock-paper-scissor/img/paper.png); 
+    
+}
+
+#scissors {
+    background-image: url(file:///C:/Users/theol/Documents/Learning%20code/The%20Odin%20Project/rock-paper-scissor/img/scissors.png) ;
+}
+
