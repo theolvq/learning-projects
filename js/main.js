@@ -1,14 +1,14 @@
 const container = document.querySelector(".container");
-let gridSize = parseInt(prompt("What grid size would you like?"));
+// let gridSize = parseInt(prompt("What grid size would you like?"));
 let pixel = document.getElementsByClassName('.square')
 
-function createDivs(gridSize) {
-  for (i = 0; i < gridSize; i++) {
+function createDivs(n) {
+  for (i = 0; i < n; i++) {
     const row = document.createElement("div");
     row.classList.add("square")
     
 
-    for (let j = 0; j < gridSize; j++) {
+    for (let j = 0; j < n; j++) {
       const column = document.createElement("div");
       column.classList.add("square");
       column.style.width = `${960/gridSize}px`
@@ -18,12 +18,12 @@ function createDivs(gridSize) {
     container.appendChild(row);
   }
 }
-createDivs(gridSize);
+createDivs(16);
 
-function getGridSize() {
-  container.style.flexBasis = `${100 / gridSize}%;`;
-}
-getGridSize();
+// function getGridSize() {
+//   container.style.flexBasis = `${100 / gridSize}%;`;
+// }
+// getGridSize();
 
 
 container.addEventListener("mouseover", changeColor);
