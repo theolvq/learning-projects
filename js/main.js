@@ -1,32 +1,41 @@
 const container = document.querySelector(".container");
-// let gridSize = parseInt(prompt("What grid size would you like?"));
-let pixel = document.getElementsByClassName('.square')
+let gridSize = 16;
+const button = document.querySelector('#button')
+let square = document.querySelectorAll('div')
 
-function createDivs(n) {
-  for (i = 0; i < n; i++) {
-    const row = document.createElement("div");
-    row.classList.add("square")
-    
 
-    for (let j = 0; j < n; j++) {
-      const column = document.createElement("div");
-      column.classList.add("square");
-      column.style.width = `${960/gridSize}px`
-      column.style.height = `${500/gridSize}px`
-      container.appendChild(column);
-    }
-    container.appendChild(row);
+
+
+function getGridSize(){
+  gridSize = parseInt(prompt("What grid size would you like?"))  
+}
+
+
+function createDivs(size) {
+  for(let i = 0; i<size*size; i++){ 
+    square = document.createElement('div')
+    square.classList.add('square')
+    container.appendChild(square)
   }
 }
-createDivs(16);
+createDivs(gridSize);
+window.addEventListener()
 
-// function getGridSize() {
-//   container.style.flexBasis = `${100 / gridSize}%;`;
+// function resetGrid() {
+ 
 // }
-// getGridSize();
 
 
-container.addEventListener("mouseover", changeColor);
+button.addEventListener('click', () => {
+  getGridSize()
+  resetGrid()
+  createDivs(gridSize)
+})
+
+document.querySelectorAll('.square').forEach(item => {
+  item.addEventListener('mouseover', changeColor)
+})
+
 
 function changeColor(e) {
     let square = e.target;
@@ -37,9 +46,10 @@ function changeColor(e) {
     return (square.style.backgroundColor = `rgb(${red},${green},${blue})`);
 }
 
+
 // function getColor(event) {let square = event.target ... rest of your code}
 
-const grid = document.querySelectorAll("div");
+// const grid = document.querySelectorAll("div");
 // grid.forEach((div) => div.addEventListener('mouseenter', changeColor))
 
 // function changeColor() {
@@ -48,4 +58,22 @@ const grid = document.querySelectorAll("div");
 
 //     })
 //     console.log('Kinda works')
+// }
+
+
+// function createDivs(gridSize) {
+//   for (let i = 0; i < gridSize; i++) {
+//     const row = document.createElement("div");
+//     row.classList.add("square")
+    
+
+//     for (let j = 0; j < gridSize; j++) {
+//       const column = document.createElement("div");
+//       column.classList.add("square");
+//       column.style.width = `${960/gridSize}px`
+//       column.style.height = `${500/gridSize}px`
+//       container.appendChild(column);
+//     }
+//     container.appendChild(row);
+//   }
 // }
