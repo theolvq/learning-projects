@@ -24,18 +24,22 @@ body {
 }
 
 .btn {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: lowercase;
   text-decoration: none;
   font-variant: small-caps;
   vertical-align: middle;
-  margin-bottom: 2em;
-  border-radius: 3px;
+  margin-bottom: 2rem;
+  border-radius: 0.2rem;
   padding: 0.8em;
   background: #16679a;
   border: 1px solid transparent;
   color: white;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
@@ -53,8 +57,4 @@ body {
 
 .square {
   border: 1px solid black;
-}
-
-.square-black {
-  background: black;
 }

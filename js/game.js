@@ -1,12 +1,30 @@
 const container = document.querySelector(".container");
 const btnReset = document.querySelector(".btn-reset");
-btnResize = document.querySelector(".btn-resize");
+const btnResize = document.querySelector(".btn-resize");
+const btnBlack = document.querySelector(".btn-black");
+const btnRainbow = document.querySelector(".btn-rainbow");
 const pixel = document.querySelectorAll(".square");
 let gridSize = 16;
+let color = "black";
+
+//reset grid
+btnReset.addEventListener("click", () => {
+  resetGrid();
+});
+
+btnBlack.addEventListener("click", () => ((color = "black"), resetGrid()));
+btnRainbow.addEventListener("click", () => ((color = "rainbow"), resetGrid()));
 
 // change square color
 function changeColor(e) {
-  e.classList.add("square-black");
+  if (color === "black") {
+    e.style.backgroundColor = "black";
+  } else if (color === "rainbow") {
+    let red = Math.floor(Math.random() * 256 + 1);
+    let green = Math.floor(Math.random() * 256 + 1);
+    let blue = Math.floor(Math.random() * 256 + 1);
+    e.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  }
 }
 
 // create grid
@@ -25,14 +43,14 @@ function createGrid(size) {
 window.addEventListener("DOMContentLoaded", createGrid(gridSize));
 
 //resize grid
-btnResize.addEventListener("click", function () {
+btnResize.addEventListener("click", () => {
   do {
     gridSize = parseInt(prompt("How many squares per side?"));
   } while (gridSize >= 100);
   createGrid(gridSize);
 });
 
-//reset grid
-btnReset.addEventListener("click", function () {
-  pixel.forEach((p) => p.classList.remove("square-black"));
-});
+function resetGrid() {
+  const square = document.querySelectorAll(".square");
+  square.forEach((s) => (s.style.backgroundColor = "white"));
+}
