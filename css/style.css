@@ -112,10 +112,14 @@ body {
   background: #343a40;
 }
 
-.operator {
+.operator,
+.equal,
+.clear {
   background: #212529;
 }
 
-.operator:hover {
+.operator:hover,
+.equal:hover,
+.clear:hover {
   background: #495057;
 }
