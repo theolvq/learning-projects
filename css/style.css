@@ -15,14 +15,23 @@ body {
   text-transform: uppercase;
 }
 
-#button {
+.btn {
   font-size: 1em;
   font-weight: bold;
+  text-transform: lowercase;
+  text-decoration: none;
+  font-variant: small-caps;
+  vertical-align: middle;
   margin-bottom: 2em;
-  border-radius: 1em;
+  border-radius: 3px;
   padding: 0.8em;
-  background: yellow;
-  border: 1px solid gray;
+  background: #16679a;
+  border: 1px solid transparent;
+  color: white;
+}
+
+.btn:hover {
+  background: #1d4e89;
 }
 
 .container {

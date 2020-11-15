@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const button = document.querySelector("#button");
+const button = document.querySelector(".btn");
 let gridSize = 16;
 
 // create grid
@@ -22,23 +22,19 @@ const pixel = document.querySelectorAll(".square");
 // change square color
 function changeColor() {
   pixel.forEach((p) => {
-    p.addEventListener("mouseover", function (e) {
+    p.addEventListener("mouseenter", function (e) {
       let square = e.target;
       let red = Math.floor(Math.random() * 256 + 1);
       let green = Math.floor(Math.random() * 256 + 1);
       let blue = Math.floor(Math.random() * 256 + 1);
-
       square.style.backgroundColor = `rgb(${red},${green},${blue})`;
-
-      //   const square = e.target;
-      //   square.style.backgroundColor = "black";
     });
   });
 }
 
 //reset grid
 button.addEventListener("click", function () {
-  container.innerHTML = "";
+  pixel.forEach((p) => p.remove());
   do {
     gridSize = parseInt(prompt("How many squares per side?"));
   } while (gridSize >= 100);
