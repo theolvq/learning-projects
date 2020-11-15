@@ -1,6 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+/* layout */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+.display {
+  width: 50vmin;
+  height: 10vh;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* grid */
 .calculator {
-  width: 500px;
-  height: 500px;
+  width: 50vmin;
+  height: 50vmin;
   display: grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -74,4 +96,26 @@
 
 #clear {
   grid-area: c;
+}
+
+/* button sytling */
+.btn {
+  font-size: 2rem;
+  color: white;
+}
+
+.operand {
+  background: black;
+}
+
+.operand:hover {
+  background: #343a40;
+}
+
+.operator {
+  background: #212529;
+}
+
+.operator:hover {
+  background: #495057;
 }
