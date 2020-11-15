@@ -1,6 +1,21 @@
 const container = document.querySelector(".container");
-const button = document.querySelector(".btn");
+const btnReset = document.querySelector(".btn-reset");
+btnResize = document.querySelector(".btn-resize");
 let gridSize = 16;
+
+//resize grid
+btnResize.addEventListener("click", function () {
+  pixel.forEach((p) => p.remove());
+  do {
+    gridSize = parseInt(prompt("How many squares per side?"));
+  } while (gridSize >= 100);
+  createGrid(gridSize);
+});
+
+//reset grid
+btnReset.addEventListener("click", function () {
+  pixel.forEach((p) => p.classList.remove("square-black"));
+});
 
 // create grid
 function createGrid(size) {
@@ -15,30 +30,14 @@ function createGrid(size) {
   }
 }
 
-createGrid(gridSize);
+window.addEventListener("DOMContentLoaded", createGrid(gridSize));
 
 const pixel = document.querySelectorAll(".square");
 
 // change square color
-function changeColor() {
-  pixel.forEach((p) => {
-    p.addEventListener("mouseenter", function (e) {
-      let square = e.target;
-      let red = Math.floor(Math.random() * 256 + 1);
-      let green = Math.floor(Math.random() * 256 + 1);
-      let blue = Math.floor(Math.random() * 256 + 1);
-      square.style.backgroundColor = `rgb(${red},${green},${blue})`;
-    });
+pixel.forEach((p) => {
+  p.addEventListener("mouseenter", function (e) {
+    let square = e.target;
+    square.classList.add("square-black");
   });
-}
-
-//reset grid
-button.addEventListener("click", function () {
-  pixel.forEach((p) => p.remove());
-  do {
-    gridSize = parseInt(prompt("How many squares per side?"));
-  } while (gridSize >= 100);
-  createGrid(gridSize);
 });
-
-changeColor();

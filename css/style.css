@@ -15,6 +15,14 @@ body {
   text-transform: uppercase;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  margin: 1vh;
+}
+
 .btn {
   font-size: 1em;
   font-weight: bold;
@@ -41,10 +49,12 @@ body {
   height: 75vh;
   width: 75vw;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
 }
 
 .square {
   border: 1px solid black;
+}
+
+.square-black {
+  background: black;
 }
