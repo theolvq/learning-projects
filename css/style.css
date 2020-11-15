@@ -1,0 +1,77 @@
+.calculator {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "seven eight nine div"
+    "four five six mult"
+    "one two three sub"
+    "eq zero c add";
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#div {
+  grid-area: div;
+}
+
+#mult {
+  grid-area: mult;
+}
+
+#sub {
+  grid-area: sub;
+}
+
+#add {
+  grid-area: add;
+}
+
+#equal {
+  grid-area: eq;
+}
+
+#clear {
+  grid-area: c;
+}

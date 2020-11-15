@@ -17,3 +17,7 @@
    - display,
    - buttons for digits,
    - all operators (including equal)
+
+### Thoughts
+
+would using an array to store digits be a good idea? if yes how could operatorsbe store? when should we send to the array?
