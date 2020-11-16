@@ -14,6 +14,7 @@ const operate = (n1, n2, operator) => {
   } else if (operator == "/") {
     result = div(n1, n2);
   }
+  display.textContent = result;
   return result;
 };
 
@@ -40,9 +41,11 @@ digits.forEach((d) =>
   })
 );
 
-let operatorArr = [];
+let op;
 operator.forEach((o) =>
   o.addEventListener("click", () => {
-    operatorArr.push(o.dataset.id);
+    op = o.dataset.id;
   })
 );
+
+equal.addEventListener("click", () => operate(num1, num2, op));
