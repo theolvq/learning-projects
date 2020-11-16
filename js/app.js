@@ -1,8 +1,16 @@
+//button selection
+const btns = document.querySelectorAll(".btn");
+const digits = document.querySelectorAll(".operand");
+const operator = document.querySelectorAll(".operator");
+const equal = document.querySelector(".equal");
+const clear = document.querySelector(".clear");
+const display = document.querySelector(".display");
+
 // operation functions
-const add = (a, b) => a + b;
-const sub = (a, b) => a - b;
-const mult = (a, b) => a * b;
-const div = (a, b) => a / b;
+const add = (a, b) => parseInt(a) + parseInt(b);
+const sub = (a, b) => parseInt(a) - parseInt(b);
+const mult = (a, b) => parseInt(a) * parseInt(b);
+const div = (a, b) => parseInt(a) / parseInt(b);
 const operate = (n1, n2, operator) => {
   let result;
   if (operator === "+") {
@@ -14,17 +22,9 @@ const operate = (n1, n2, operator) => {
   } else if (operator == "/") {
     result = div(n1, n2);
   }
-  display.textContent = result;
+  display.textContent = result.toFixed(6);
   return result;
 };
-
-//button selection
-const btns = document.querySelectorAll(".btn");
-const digits = document.querySelectorAll(".operand");
-const operator = document.querySelectorAll(".operator");
-const equal = document.querySelector(".equal");
-const clear = document.querySelector(".clear");
-const display = document.querySelector(".display");
 
 //capture button data
 let num1;
@@ -33,11 +33,13 @@ digits.forEach((d) =>
   d.addEventListener("click", () => {
     if (!num1) {
       num1 = d.dataset.id;
+      display.textContent = num1;
     } else if (num1) {
-      num2 = num1;
-      num1 = d.dataset.id;
+      num2 = d.dataset.id;
+      display.textContent = num2;
     }
-    display.textContent = num1;
+    if (!op) {
+    }
   })
 );
 
@@ -49,3 +51,11 @@ operator.forEach((o) =>
 );
 
 equal.addEventListener("click", () => operate(num1, num2, op));
+
+const clearFn = () => {
+  display.textContent = "";
+  num1 = "";
+  num2 = "";
+};
+
+clear.addEventListener("click", () => clearFn());
