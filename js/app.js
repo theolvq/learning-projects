@@ -3,42 +3,46 @@ const add = (a, b) => a + b;
 const sub = (a, b) => a - b;
 const mult = (a, b) => a * b;
 const div = (a, b) => a / b;
+const operate = (n1, n2, operator) => {
+  let result;
+  if (operator === "+") {
+    result = add(n1, n2);
+  } else if (operator === "-") {
+    result = sub(n1, n2);
+  } else if (operator === "*") {
+    result = mult(n1, n2);
+  } else if (operator == "/") {
+    result = div(n1, n2);
+  }
+  return result;
+};
 
 //button selection
 const btns = document.querySelectorAll(".btn");
-const operand = document.querySelectorAll(".operand");
+const digits = document.querySelectorAll(".operand");
 const operator = document.querySelectorAll(".operator");
 const equal = document.querySelector(".equal");
 const clear = document.querySelector(".clear");
 const display = document.querySelector(".display");
 
 //capture button data
-const number = [];
-operand.forEach((n) =>
-  n.addEventListener("click", () => number.push(n.dataset.id))
+let num1;
+let num2;
+digits.forEach((d) =>
+  d.addEventListener("click", () => {
+    if (!num1) {
+      num1 = d.dataset.id;
+    } else if (num1) {
+      num2 = num1;
+      num1 = d.dataset.id;
+    }
+    display.textContent = num1;
+  })
 );
-let operation = operator.forEach((o) =>
-  o.addEventListener("click", () => o.dataset.id)
+
+let operatorArr = [];
+operator.forEach((o) =>
+  o.addEventListener("click", () => {
+    operatorArr.push(o.dataset.id);
+  })
 );
-
-const calculator = () => {
-  let result;
-  if (operation === "+") {
-    result = add(number[0], number[1]);
-  } else if (operation === "-") {
-    result = sub(number[0], number[1]);
-  } else if (operation === "/") {
-    result = div(number[0], number[1]);
-  } else if (operation === "x") {
-    result = mult(number[0], number[1]);
-  }
-  return result;
-};
-
-const displayResult = () => {
-  display.textContent = result;
-};
-
-equal.addEventListener("click", () => {
-  calculator();
-});
