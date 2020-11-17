@@ -9,18 +9,21 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
 
 .title {
   text-transform: uppercase;
+  position: absolute;
+  top: 8%;
 }
 
 .btn-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 50vw;
-  margin: 1vh;
+  width: 100vw;
+  margin: 2vmax;
 }
 
 .btn {
@@ -30,31 +33,33 @@ body {
   text-decoration: none;
   font-variant: small-caps;
   vertical-align: middle;
-  margin-bottom: 2rem;
   border-radius: 0.2rem;
-  padding: 0.8em;
-  background: #16679a;
+  padding: 0.8rem;
+  background: #ff0000;
   border: 1px solid transparent;
   color: white;
-  width: 15vw;
+  width: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn:hover {
-  background: #1d4e89;
+  background: #aa0000;
 }
 
 .container {
-  border: 5px solid black;
+  border: 100px solid red;
+  background: red;
   border-radius: 2vmax;
+  margin-top: 5vh;
   padding: 2vmax;
-  height: 75vh;
-  width: 75vw;
+  height: 85vh;
+  width: 85vw;
   display: grid;
 }
 
 .square {
   border: 1px solid black;
+  background: white;
 }
