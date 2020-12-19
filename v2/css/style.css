@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	color: white;
+	font-size: 20px;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(45deg, #424242, #6d6d6d);
+}
+
+.calculator {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 100vh;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+	gap: 2px;
+}
+
+.btn {
+	cursor: pointer;
+	background: #212121;
+	border: 0;
+}
+.btn.operator {
+	background: #1b1b1b;
+}
+.btn:hover {
+	background: #484848;
+}
+
+.result {
+	border: 3px solid #212121;
+	grid-column: 1/-1;
+}
+
+.large {
+	grid-column: span 2;
+}
