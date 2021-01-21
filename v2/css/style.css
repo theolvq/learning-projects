@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	color: white;
 	font-size: 20px;
+	font-family: 'Roboto Mono', monospace;
 }
 
 body {
@@ -24,8 +25,11 @@ body {
 
 .btn {
 	cursor: pointer;
-	background: #212121;
 	border: 0;
+}
+
+.operand {
+	background: #212121;
 }
 .btn.operator {
 	background: #1b1b1b;
@@ -34,11 +38,26 @@ body {
 	background: #484848;
 }
 
-.result {
+.output {
 	border: 3px solid #212121;
 	grid-column: 1/-1;
 }
 
 .large {
 	grid-column: span 2;
+}
+
+.display {
+	font-size: 2rem;
+}
+
+.result {
+	font-size: 3rem;
+}
+
+.result,
+.display {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
