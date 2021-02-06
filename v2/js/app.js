@@ -1,30 +1,41 @@
-const btns = document.querySelectorAll('.btn');
-const display = document.querySelector('.display');
-const result = document.querySelector('.result');
-const equal = document.querySelector('#equal');
-const operator = document.querySelectorAll('.operator');
-const operand = document.querySelectorAll('.operand');
+//button selection
+const btns = document.querySelectorAll('.btn')
+const digits = document.querySelectorAll('.operand')
+const operator = document.querySelectorAll('.operator')
+const equal = document.querySelector('#equal')
+const clear = document.querySelector('#clear')
+const del = document.querySelector('#delete')
+const display = document.querySelector('.display')
 
-const add = (a, b) => parseFloat(a) + parseFloat(b);
-const subtract = (a, b) => parseFloat(a) - parseFloat(b);
-const multiply = (a, b) => parseFloat(a) * parseFloat(b);
-const divide = (a, b) => parseFloat(a) / parseFloat(b);
+// operation functions
+const add = (a, b) => parseFloat(a) + parseFloat(b)
+const subtract = (a, b) => parseFloat(a) - parseFloat(b)
+const multiply = (a, b) => parseFloat(a) * parseFloat(b)
+const divide = (a, b) => parseFloat(a) / parseFloat(b)
 
 const operate = (n1, n2, operator) => {
 	switch (operator) {
 		case '+':
-			return add(n1, n2);
+			add(n1, n2)
+			break
 		case '-':
-			return subtract(n1, n2);
+			subtract(n1, n2)
+			break
 		case 'x':
-			return multiply(n1, n2);
+			multiply(n1, n2)
+			break
 		case '÷':
-			return divide(n1, n2);
+			divide(n1, n2)
+			break
 	}
-};
+}
 
-operand.forEach(button =>
-	button.addEventListener('click', () => appendNumber(button.innerText))
-);
+// Object literal
+const calculator = {}
 
-const appendNumber = () => {};
+digits.forEach(digit =>
+	digit.addEventListener('click', () => {
+		calculator.operand = digit.textContent
+		console.log(calculator.operand)
+	})
+)
