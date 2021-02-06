@@ -31,7 +31,8 @@ body {
 .operand {
 	background: #212121;
 }
-.btn.operator {
+.btn.operator,
+.non-operator {
 	background: #1b1b1b;
 }
 .btn:hover {
