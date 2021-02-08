@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.overlay {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay-hidden {
+	display: none;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.form {
+	padding: 1.5rem;
+	border: 1px solid gray;
+	background: darkgray;
+	height: 300px;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+label[for='read-status'] {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+}

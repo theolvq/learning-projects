@@ -10,17 +10,21 @@
 </head>
 
 <body>
-    <form action="">
-        <label for="title">Title: </label>
-        <input type="text" name="title">
-        <label for="author">Author: </label>
-        <input type="text" name="author">
-        <label for="pages">Number of Pages: </label>
-        <input type="text" name="pages">
-        <label for="read-status">Have you read it yet? </label>
-        <input type="checkbox" name="read-status">
-        <input type="button" value="Click">
-    </form>
+    <div class="overlay-hidden" id="overlay">
+        <form class="form" id="form" action="">
+            <label for="title">Title:
+                <input type="text" name="title"></label>
+            <label for="author">Author:
+                <input type="text" name="author"></label>
+            <label for="pages">Number of Pages:
+                <input type="text" name="pages"></label>
+            <label for="read-status">Have you read it yet?
+                <input type="checkbox" name="read-status"></label>
+            <input type="button" value="Click">
+        </form>
+    </div>
+    <button class="btn add-btn">Add Book</button>
+
 
     <script src="js/script.js"></script>
 </body>
