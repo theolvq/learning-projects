@@ -11,17 +11,23 @@
 
 <body>
     <div class="overlay-hidden" id="overlay">
-        <form class="form" id="form" action="">
-            <label for="title">Title:
-                <input type="text" name="title"></label>
-            <label for="author">Author:
-                <input type="text" name="author"></label>
-            <label for="pages">Number of Pages:
-                <input type="text" name="pages"></label>
-            <label for="read-status">Have you read it yet?
-                <input type="checkbox" name="read-status"></label>
-            <input type="button" value="Click">
-        </form>
+        <section class="form-container">
+            <form class="form" id="form" action="">
+                <label for="title">
+                    <span></span>
+                    <input type="text" name="title"></label>
+                <label for="author">
+                    <span></span>
+                    <input type="text" name="author"></label>
+                <label for="pages">
+                    <span></span>
+                    <input type="text" name="pages"></label>
+                <label for="read-status">Have you read it yet?
+                    <input type="checkbox" name="read-status"></label>
+                <button class="btn submit-btn">Click</button>
+            </form>
+        </section>
+
     </div>
     <button class="btn add-btn">Add Book</button>
 

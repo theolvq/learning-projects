@@ -1,3 +1,20 @@
+/* 
+dark-slate-gray: 404E4D
+madder-lake: cd3423f
+android-green: 9bc53d
+minion yellow: fde74c
+cyan process: 5bc0eb
+*/
+
+/* 
+Monochromatic blue-greens
+dar jungle green: 0F2623
+turquoise: 17D1B5
+sea green crayola: 1ff2d3
+rich black frogra 39: 040807
+feldrgrau: 455C58
+*/
+
 *,
 *::after,
 *::before {
@@ -6,37 +23,88 @@
 	padding: 0;
 }
 
+body {
+	background: #92bde7;
+	color: #17d1b5;
+	line-height: 1.6;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .overlay {
 	position: absolute;
 	height: 100vh;
 	width: 100vw;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(69, 92, 88, 0.9);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 2;
 }
 
 .overlay-hidden {
 	display: none;
-	position: absolute;
-	height: 100vh;
-	width: 100vw;
-	background: rgba(0, 0, 0, 0.7);
+}
+
+.form-container {
+	box-shadow: 0 0 1.5rem #0f2623;
+	border-radius: 2em;
+	padding: 1.5rem;
+	background: #040807;
+	height: 500px;
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .form {
-	padding: 1.5rem;
-	border: 1px solid gray;
-	background: darkgray;
-	height: 300px;
-	width: 250px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-
+.form > * {
+	padding: 1em;
+}
 label[for='read-status'] {
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
 	justify-content: center;
+}
+
+input,
+label[for='read-status'] {
+	border: 0;
+	background: #040807;
+	border-bottom: 3px solid #0f2623;
+	padding: 0.75em 0.1em 0.1em 0.1em;
+	margin: 0.5em;
+	color: #1ff2d3;
+	font-size: 1.5rem;
+}
+
+.submit-btn {
+	border: 0;
+	background: #1ff2d3;
+}
+
+input:focus {
+	outline: none;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+	background: #17d1b5;
+	color: #040807;
+}
+
+label[for='title'] span::before {
+	content: 'Title';
+	position: absolute;
+}
+label[for='author'] span::before {
+	content: 'Author';
+	position: absolute;
+}
+label[for='pages'] span::before {
+	content: 'Pages';
+	position: absolute;
 }

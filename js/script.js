@@ -1,5 +1,5 @@
 let myLibrary = []
-const submitBtn = document.querySelector('input[type="button"]')
+const submitBtn = document.querySelector('.submit-btn')
 const addBtn = document.querySelector('.add-btn')
 const overlay = document.querySelector('#overlay')
 const form = document.querySelector('#form')
@@ -25,8 +25,8 @@ const openForm = () => {
 	overlay.classList.add('overlay')
 }
 
-const escapeOverlay = () => {
-	if (!overlay.classList.contains('hidden')) {
+const escapeOverlay = e => {
+	if (e.target === overlay && overlay.classList.contains('hidden')) {
 		overlay.classList.remove('overlay')
 		overlay.classList.add('overlay-hidden')
 	}
