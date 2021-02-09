@@ -64,11 +64,6 @@ body {
 .form > * {
 	padding: 1em;
 }
-label[for='read-status'] {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
 
 input,
 label[for='read-status'] {
@@ -86,8 +81,10 @@ label[for='read-status'] {
 	background: #1ff2d3;
 }
 
-input:focus {
+input:focus[type='text'] {
 	outline: none;
+	border-bottom: 3px solid #1ff2d3;
+	transition: 0.5s;
 }
 
 .submit-btn:hover,
@@ -107,4 +104,40 @@ label[for='author'] span::before {
 label[for='pages'] span::before {
 	content: 'Pages';
 	position: absolute;
+}
+label[for='read-status'] span::before {
+	content: 'already read';
+}
+
+input[type='checkbox'] {
+	position: relative;
+	width: 80px;
+	height: 40px;
+	appearance: none;
+	background: #0f2623;
+	outline: none;
+	border-radius: 20px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+}
+input:checked[type='checkbox'] {
+	background: #17d1b5;
+}
+
+input[type='checkbox']::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	top: 0;
+	left: 0;
+	background: #fff;
+	transform: scale(1.1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+}
+
+input:checked[type='checkbox']::before {
+	left: 40px;
 }
