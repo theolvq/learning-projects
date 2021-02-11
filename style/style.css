@@ -160,8 +160,8 @@ feldrgrau: 455C58
 	width: 80%;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(4, minmax(max-content, 1fr));
-	grid-template-rows: repeat(4, minmax(max-content, 1fr));
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	grid-template-rows: repeat(4, minmax(200px, 1fr));
 	gap: 2rem;
 	color: #1ff2d3;
 }
