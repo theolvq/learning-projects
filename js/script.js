@@ -39,7 +39,9 @@ const addToLibrary = () => {
 	myLibrary.push(new Book(bookTitle, bookAuthor, bookPages, bookStatus))
 	setMyLibrary()
 	confirmation.innerText = 'Book Added!'
-	console.log(localStorage)
+	setTimeout(() => {
+		confirmation.innerText = ''
+	}, 3000)
 }
 
 const openForm = () => {
@@ -68,7 +70,9 @@ const createBook = () => {
 	card.innerHTML = `<h3 class="card-title">${currentBook.title}</h3>
 	<h3 class="card-author">${currentBook.author}</h3>
 	<h3 class="card-pages">${currentBook.pages}</h3>
-	<h3 class="card-read-status">${currentBook.status}</h3>`
+	<h3 class="card-read-status">${
+		currentBook.status ? 'Already Read' : 'Not read yet'
+	}</h3>`
 }
 
 const populateLibrary = () => {
@@ -81,7 +85,9 @@ const populateLibrary = () => {
 		card.innerHTML = `<h3 class="card-title">${book.title}</h3>
 		<h3 class="card-author">${book.author}</h3>
 		<h3 class="card-pages">${book.pages}</h3>
-		<h3 class="card-read-status">${book.status}</h3>`
+		<h3 class="card-read-status">${
+			book.status ? 'Already read' : 'Not read yet'
+		}</h3>`
 	})
 }
 

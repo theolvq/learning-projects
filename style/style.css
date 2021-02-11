@@ -14,7 +14,7 @@ sea green crayola: 1ff2d3
 rich black frogra 39: 040807
 feldrgrau: 455C58
 */
-
+/* Reset */
 *,
 *::after,
 *::before {
@@ -22,7 +22,7 @@ feldrgrau: 455C58
 	margin: 0;
 	padding: 0;
 }
-
+/* General styles */
 body {
 	background: #0f2623;
 	color: #17d1b5;
@@ -30,6 +30,18 @@ body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+header * {
+	padding: 1rem;
+}
+/* Overlay styling */
 .overlay {
 	position: absolute;
 	height: 100vh;
@@ -45,7 +57,7 @@ body {
 	display: none;
 	opacity: 0;
 }
-
+/* Form Styling */
 .form-container {
 	box-shadow: 0 0 1.5rem #0f2623;
 	border-radius: 2em;
@@ -77,21 +89,26 @@ label[for='read-status'] {
 	font-size: 1.5rem;
 }
 
-.submit-btn {
+.btn {
 	border: 0;
 	background: #1ff2d3;
+}
+
+.btn:hover,
+.btn:focus {
+	background: #17d1b5;
+	color: #040807;
+}
+
+.add-btn {
+	padding: 1rem;
+	margin: 0 auto;
 }
 
 input:focus[type='text'] {
 	outline: none;
 	border-bottom: 3px solid #1ff2d3;
 	transition: 0.5s;
-}
-
-.submit-btn:hover,
-.submit-btn:focus {
-	background: #17d1b5;
-	color: #040807;
 }
 
 label[for='title'] span::before {
