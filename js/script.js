@@ -39,7 +39,6 @@ const addToLibrary = () => {
 	myLibrary.push(new Book(bookTitle, bookAuthor, bookPages, bookStatus))
 	setMyLibrary()
 	confirmation.innerText = 'Book Added!'
-	window.setTimeout((confirmation.innerText = ''), 3000)
 	console.log(localStorage)
 }
 
@@ -63,15 +62,30 @@ const createBook = () => {
 	myLibrary = getMyLibrary()
 	const currentBook = myLibrary[myLibrary.length - 1]
 	const card = document.createElement('div')
+	card.classList.add('card')
 	const libraryContainer = document.querySelector('.library-container')
 	libraryContainer.appendChild(card)
-	card.classList.add('card')
 	card.innerHTML = `<h3 class="card-title">${currentBook.title}</h3>
 	<h3 class="card-author">${currentBook.author}</h3>
 	<h3 class="card-pages">${currentBook.pages}</h3>
 	<h3 class="card-read-status">${currentBook.status}</h3>`
 }
 
+const populateLibrary = () => {
+	myLibrary = getMyLibrary()
+	myLibrary.forEach(book => {
+		const card = document.createElement('div')
+		const libraryContainer = document.querySelector('.library-container')
+		libraryContainer.appendChild(card)
+		card.classList.add('card')
+		card.innerHTML = `<h3 class="card-title">${book.title}</h3>
+		<h3 class="card-author">${book.author}</h3>
+		<h3 class="card-pages">${book.pages}</h3>
+		<h3 class="card-read-status">${book.status}</h3>`
+	})
+}
+
+window.addEventListener('load', populateLibrary)
 addBtn.addEventListener('click', openForm)
 submitBtn.addEventListener('click', () => {
 	addToLibrary()
