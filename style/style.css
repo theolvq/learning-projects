@@ -123,9 +123,6 @@ label[for='pages'] span::before {
 	content: 'Pages';
 	position: absolute;
 }
-label[for='read-status'] span::before {
-	content: 'already read';
-}
 
 input[type='checkbox'] {
 	position: relative;

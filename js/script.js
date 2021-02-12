@@ -1,5 +1,6 @@
 const submitBtn = document.querySelector('.submit-btn')
 const addBtn = document.querySelector('.add-btn')
+const deleteBtn = document.querySelectorAll('.delete')
 const overlay = document.querySelector('#overlay')
 const form = document.querySelector('#form')
 const confirmation = document.querySelector('#confirmation')
@@ -15,19 +16,19 @@ class Book {
 		this.pages = pages
 		this.status = status
 	}
-	info() {
-		return `${this.title} by ${this.author}, ${this.pages} pages, ${
-			this.status ? 'Already read!' : 'Not read yet.'
-		}`
-	}
 }
 
-const getMyLibrary = () => JSON.parse(localStorage.getItem('myLibrary'))
+const getMyLibrary = () => {
+	return JSON.parse(localStorage.getItem('myLibrary'))
+}
 
-const setMyLibrary = () =>
-	localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
+const setMyLibrary = () => {
+	return localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
+}
 
-if (localStorage.getItem('myLibrary') === null) setMyLibrary()
+if (localStorage.getItem('myLibrary') === null) {
+	setMyLibrary()
+}
 
 const addToLibrary = () => {
 	const bookTitle = document.querySelector('input[name="title"]').value
@@ -67,12 +68,14 @@ const createBook = () => {
 	card.classList.add('card')
 	const libraryContainer = document.querySelector('.library-container')
 	libraryContainer.appendChild(card)
+	card.setAttribute('data-index', myLibrary.indexOf(currentBook))
 	card.innerHTML = `<h3 class="card-title">${currentBook.title}</h3>
 	<h3 class="card-author">${currentBook.author}</h3>
 	<h3 class="card-pages">${currentBook.pages}</h3>
-	<h3 class="card-read-status">${
-		currentBook.status ? 'Already Read' : 'Not read yet'
-	}</h3>`
+	<input id="read" type="checkbox" ${currentBook.status ? 'checked' : undefined}>
+	<div class="slider round"></div>
+	<button class="delete">Delete</button>
+	`
 }
 
 const populateLibrary = () => {
@@ -82,20 +85,32 @@ const populateLibrary = () => {
 		const libraryContainer = document.querySelector('.library-container')
 		libraryContainer.appendChild(card)
 		card.classList.add('card')
+		card.setAttribute('data-index', myLibrary.indexOf(book))
 		card.innerHTML = `<h3 class="card-title">${book.title}</h3>
 		<h3 class="card-author">${book.author}</h3>
 		<h3 class="card-pages">${book.pages}</h3>
-		<h3 class="card-read-status">${
-			book.status ? 'Already read' : 'Not read yet'
-		}</h3>`
+		<input id="read" type="checkbox" ${book.status ? 'checked' : undefined}>
+		<div class="slider round"></div>
+		<button class="delete">Delete</button>`
 	})
 }
+populateLibrary()
 
-window.addEventListener('load', populateLibrary)
+const removeBook = e => {
+	myLibrary = getMyLibrary()
+	if (e.target.classList.contains('delete')) {
+		let index = e.target.parentElement.dataset.index
+		myLibrary.splice(index, 1)
+		e.target.parentElement.remove()
+		setMyLibrary()
+	}
+}
+
+window.addEventListener('click', removeBook)
 addBtn.addEventListener('click', openForm)
+overlay.addEventListener('click', escapeOverlay)
 submitBtn.addEventListener('click', () => {
 	addToLibrary()
-	createBook()
 	escapeOverlay(submitBtn)
+	createBook()
 })
-overlay.addEventListener('click', escapeOverlay)
