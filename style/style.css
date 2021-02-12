@@ -92,6 +92,7 @@ label[for='read-status'] {
 .btn {
 	border: 0;
 	background: #1ff2d3;
+	padding: 1rem;
 }
 
 .btn:hover,
@@ -101,7 +102,6 @@ label[for='read-status'] {
 }
 
 .add-btn {
-	padding: 1rem;
 	margin: 0 auto;
 }
 

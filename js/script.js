@@ -74,7 +74,7 @@ const createBook = () => {
 	<h3 class="card-pages">${currentBook.pages}</h3>
 	<input id="read" type="checkbox" ${currentBook.status ? 'checked' : undefined}>
 	<div class="slider round"></div>
-	<button class="delete">Delete</button>
+	<button class="delete-btn btn">Delete</button>
 	`
 }
 
@@ -91,14 +91,13 @@ const populateLibrary = () => {
 		<h3 class="card-pages">${book.pages}</h3>
 		<input id="read" type="checkbox" ${book.status ? 'checked' : undefined}>
 		<div class="slider round"></div>
-		<button class="delete">Delete</button>`
+		<button class="delete-btn btn">Delete</button>`
 	})
 }
-populateLibrary()
 
 const removeBook = e => {
 	myLibrary = getMyLibrary()
-	if (e.target.classList.contains('delete')) {
+	if (e.target.classList.contains('delete-btn')) {
 		let index = e.target.parentElement.dataset.index
 		myLibrary.splice(index, 1)
 		e.target.parentElement.remove()
@@ -106,6 +105,7 @@ const removeBook = e => {
 	}
 }
 
+window.addEventListener('load', populateLibrary)
 window.addEventListener('click', removeBook)
 addBtn.addEventListener('click', openForm)
 overlay.addEventListener('click', escapeOverlay)
