@@ -1,0 +1,12 @@
+.gameboard {
+	width: 50%;
+	height: 50vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	border: 1px solid blue;
+}
+
+.square {
+	border: 1px solid green;
+}
