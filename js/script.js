@@ -16,6 +16,13 @@ class Book {
 		this.pages = pages
 		this.status = status
 	}
+	toggleStatus() {
+		if (this.status) {
+			this.status = false
+		} else {
+			this.status = true
+		}
+	}
 }
 
 const getMyLibrary = () => {
