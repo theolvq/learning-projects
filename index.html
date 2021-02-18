@@ -6,10 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube</title>
+    <script src="https://kit.fontawesome.com/f2c9da1d8c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+        <span class="sr-only">Open main menu</span>
+        <span class="fa fa-bars" aria-hidden="true"></span>
+    </a>
+    <img src="yt_logo_rgb_dark.png" alt="YouTube Logo" class="logo">
+
+    <nav id="main-menu" class="main-menu" aria-label="Main menu">
+        <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+            <span class="sr-only">Close main menu</span>
+            <span class="fa fa-close" aria-hidden="true"></span>
+        </a>
+        <ul>
+            <li><a href="#"> <i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#"> <i class="fas fa-fire"></i> Trending</a></li>
+            <li><a href="#"> <i class="fab fa-youtube"></i> Subscriptions</a></li>
+        </ul>
+    </nav>
+    <a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
+    <nav class="top-nav">
+        <ul>
+            <li><input type="search" name="Search" id="search" placeholder="Search"><button class="search-btn"> <i
+                        class="fa fa-search"></i></button> </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+</header>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V74l_zS1x8E" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 
 <body>
 
