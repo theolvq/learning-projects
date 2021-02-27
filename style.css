@@ -1,1 +1,18 @@
-/* font-family: 'Open Sans', sans-serif; */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--btn-background: linear-gradient(to bottom, #167ccc 0%, #0077c5 100%);
+	--blue: #0077c5;
+	--bg-grey: rgb(236, 238, 241);
+	--border-grey: rgb(193, 197, 200);
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
