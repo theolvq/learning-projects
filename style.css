@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--black: #121212;
+	--dark-grey: #333;
+	--light-grey: #666;
+	--blue: #326891;
+	--p-line-height: 1.875rem;
+	--p-font-size: 1.25rem;
+}
