@@ -56,11 +56,40 @@ a {
 	align-items: center;
 } */
 
-.header {
+.nav {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	height: 36px;
+}
+
+.nav li {
+	display: block;
+	padding: 0.5rem 1.25rem;
+	background: linear-gradient(#737373, #5e5e5e 49%, #707070 50%, #8a8a8a);
+	border: 0.5px solid #484848;
+}
+
+.nav li:first-child {
+	border-bottom-left-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+}
+
+.nav li:last-child {
+	border-bottom-right-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+}
+
+.header {
+	text-align: center;
+	width: 980px;
+}
+
+.watch {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+
+.watch img {
+	display: inline;
 }
 
 .container {
