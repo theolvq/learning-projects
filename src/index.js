@@ -1,1 +1,3 @@
-console.log('It works again!')
+import '/node_modules/normalize.css/normalize.css'
+
+console.log('is it working?')
