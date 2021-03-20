@@ -6,7 +6,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$9.90',
-    image: '~/img/caesar-salad.jpg',
+    image: './img/caesar-salad.jpg',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$11.90',
-    image: '~/img/fish-tacos.jpg',
+    image: './img/fish-tacos.jpg',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$9.90',
-    image: '~/img/vegan-salad.jpg',
+    image: './img/vegan-salad.jpg',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$9.90',
-    image: '~/img/snack-board.jpg',
+    image: './img/snack-board.jpg',
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$16.90',
-    image: '~/img/vegan-burger.jpg',
+    image: './img/vegan-burger.jpg',
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$13.90',
-    image: '~/img/burrito.jpg',
+    image: './img/burrito.jpg',
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$15.90',
-    image: '~/img/meat-burger.jpg',
+    image: './img/meat-burger.jpg',
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$14.90',
-    image: '~/img/pasta-carbonara.jpg',
+    image: './img/pasta-carbonara.jpg',
   },
 ];
 
