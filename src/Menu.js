@@ -1,12 +1,12 @@
-// //images
-// import fishTacos from './img/fish-tacos.jpg';
-// import caesarSalad from './img/caesar-salad.jpg';
-// import snackBoard from './img/snack-board.jpg';
-// import veganSalad from './img/vegan-salad.jpg';
-// import veganBurger from './img/vegan-burger.jpg';
-// import meatBurger from './img/meat-burger.jpg';
-// import burrito from './img/burrito.jpg';
-// import pastaCarbonara from './img/pasta-carbonara.jpg';
+//images
+import fishTacos from './img/fish-tacos.jpg';
+import caesarSalad from './img/caesar-salad.jpg';
+import snackBoard from './img/snack-board.jpg';
+import veganSalad from './img/vegan-salad.jpg';
+import veganBurger from './img/vegan-burger.jpg';
+import meatBurger from './img/meat-burger.jpg';
+import burrito from './img/burrito.jpg';
+import pastaCarbonara from './img/pasta-carbonara.jpg';
 
 const menu = [
   {
@@ -16,6 +16,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$9.90',
+    image: caesarSalad,
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$11.90',
+    image: fishTacos,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$9.90',
+    image: veganSalad,
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$9.90',
+    image: snackBoard,
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$16.90',
+    image: veganBurger,
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$13.90',
+    image: burrito,
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$15.90',
+    image: meatBurger,
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ const menu = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque amet unde molestiae a beatae magnam!',
     price: '$14.90',
+    image: pastaCarbonara,
   },
 ];
 
@@ -85,14 +93,23 @@ const createMenu = () => {
     card.classList.add('card');
     container.appendChild(card);
 
+    const image = new Image();
+    image.src = el.image;
+    card.appendChild(image);
+    image.classList.add('menu-img');
+
+    const section = document.createElement('section');
+    card.appendChild(section);
+    section.classList.add('description-container');
+
     const itemTitle = document.createElement('h3');
-    card.appendChild(itemTitle);
+    section.appendChild(itemTitle);
     itemTitle.innerText = el.name;
 
     const itemDescription = document.createElement('p');
-    card.appendChild(itemDescription);
+    section.appendChild(itemDescription);
     itemDescription.innerText = el.description;
   });
 };
 
-window.addEventListener('load', createMenu);
+export default createMenu;

@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 .nav {
   display: flex;
   margin: 0 auto;
@@ -28,8 +32,24 @@ a {
   margin: 0 auto;
 }
 
+.title {
+  margin: 0 auto;
+}
+
 .card {
-  min-height: 300px;
+  min-height: 200px;
   width: 80%;
-  background: ;
+  background: grey;
+  margin: 5rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5em;
+}
+
+.card > * {
+  margin: 2rem 0;
+}
+
+.menu-img {
+  max-width: 640px;
 }

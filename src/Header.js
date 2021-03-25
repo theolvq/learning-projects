@@ -4,7 +4,8 @@ const createHeader = () => {
 
   const title = document.createElement('h1');
   header.appendChild(title);
+  title.classList.add('title');
   title.innerText = 'Your average dinner';
 };
 
-window.addEventListener('load', createHeader);
+export default createHeader;
