@@ -54,6 +54,7 @@ img {
 }
 
 .container {
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -64,10 +65,9 @@ img {
 
 .card {
   min-height: 200px;
-  width: 80%;
   background: var(--black);
   color: var(--grey);
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 1.5rem;
   display: flex;
   gap: 1.5em;

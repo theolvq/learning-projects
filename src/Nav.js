@@ -7,7 +7,7 @@ const createNav = () => {
   nav.appendChild(ul);
   ul.classList.add('nav__list');
 
-  const navElements = ['About us', 'Menu', 'Contact'];
+  const navElements = ['Home', 'Menu', 'Contact'];
   navElements.forEach(el => {
     const li = document.createElement('li');
     ul.appendChild(li);
@@ -16,6 +16,7 @@ const createNav = () => {
     const link = document.createElement('a');
     li.appendChild(link);
     link.classList.add('nav__link');
+    link.id = el;
     link.href = '#';
     link.innerText = el;
   });
