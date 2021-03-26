@@ -1,3 +1,3 @@
 const createHome = () => {
-  const 
-}
+  const container = document.createElement('section');
+};
