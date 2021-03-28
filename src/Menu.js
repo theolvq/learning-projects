@@ -84,32 +84,35 @@ const menu = [
 ];
 
 const createMenu = () => {
-  const container = document.createElement('div');
-  document.body.appendChild(container);
-  container.classList.add('container');
+  if (!document.querySelector('#menu')) {
+    const menuContainer = document.createElement('section');
+    document.body.appendChild(menuContainer);
+    menuContainer.classList.add('container');
+    menuContainer.id = 'menu';
 
-  menu.forEach(el => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    container.appendChild(card);
+    menu.forEach(el => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      menuContainer.appendChild(card);
 
-    const image = new Image();
-    image.src = el.image;
-    card.appendChild(image);
-    image.classList.add('menu-img');
+      const image = new Image();
+      image.src = el.image;
+      card.appendChild(image);
+      image.classList.add('menu-img');
 
-    const section = document.createElement('section');
-    card.appendChild(section);
-    section.classList.add('description-container');
+      const descriptionContainer = document.createElement('section');
+      card.appendChild(descriptionContainer);
+      descriptionContainer.classList.add('description-container');
 
-    const itemTitle = document.createElement('h3');
-    section.appendChild(itemTitle);
-    itemTitle.innerText = el.name;
+      const itemTitle = document.createElement('h3');
+      descriptionContainer.appendChild(itemTitle);
+      itemTitle.innerText = el.name;
 
-    const itemDescription = document.createElement('p');
-    section.appendChild(itemDescription);
-    itemDescription.innerText = el.description;
-  });
+      const itemDescription = document.createElement('p');
+      descriptionContainer.appendChild(itemDescription);
+      itemDescription.innerText = el.description;
+    });
+  }
 };
 
 export default createMenu;

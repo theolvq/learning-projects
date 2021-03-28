@@ -16,6 +16,22 @@ const menuLink = document.querySelector('#Menu');
 const homeLink = document.querySelector('#Home');
 const contactLink = document.querySelector('#Contact');
 
-menuLink.addEventListener('click', Menu);
-// homeLink.addEventListener('click', Home);
+const resetPage = () => {
+  const home = document.querySelector('#home');
+  const menu = document.querySelector('#menu');
+  const contact = document.querySelector('#contact');
+
+  if (home) document.body.removeChild(home);
+  if (menu) document.body.removeChild(menu);
+  if (contact) document.body.removeChild(contact);
+};
+
+menuLink.addEventListener('click', () => {
+  resetPage();
+  Menu();
+});
+homeLink.addEventListener('click', () => {
+  resetPage();
+  Home();
+});
 // contactLink.addEventListener('click', Contact);

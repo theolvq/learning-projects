@@ -38,6 +38,10 @@ img {
   width: 100%;
 }
 
+h2 {
+  margin: 2rem;
+}
+
 .nav {
   display: flex;
   justify-content: center;
@@ -53,10 +57,20 @@ img {
   background: var(--dark-accent);
 }
 
+.row {
+  display: flex;
+  gap: 1em;
+}
+
 .container {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.item-container {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .title {
