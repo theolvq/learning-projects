@@ -73,6 +73,11 @@ h2 {
   margin: 2rem 0;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   text-align: center;
 }

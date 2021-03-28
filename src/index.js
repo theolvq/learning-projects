@@ -34,4 +34,7 @@ homeLink.addEventListener('click', () => {
   resetPage();
   Home();
 });
-// contactLink.addEventListener('click', Contact);
+contactLink.addEventListener('click', () => {
+  resetPage();
+  Contact();
+});
