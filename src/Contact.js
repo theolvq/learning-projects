@@ -1,8 +1,17 @@
 const createContactForm = () => {
   const formContainer = document.createElement('section');
   document.body.appendChild(formContainer);
-  formContainer.classList.add('container');
+  formContainer.classList.add('container', 'contact-container');
   formContainer.id = 'contact';
+
+  const contactDescriptionTitle = document.createElement('h3');
+  formContainer.appendChild(contactDescriptionTitle);
+  contactDescriptionTitle.innerText = 'Want to ask a question?';
+
+  const contactDescription = document.createElement('p');
+  formContainer.appendChild(contactDescription);
+  contactDescription.innerText =
+    "Fill out the contact form and we'll get back to you as soon as possible";
 
   const form = document.createElement('form');
   formContainer.appendChild(form);

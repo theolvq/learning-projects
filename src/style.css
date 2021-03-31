@@ -101,6 +101,15 @@ h2 {
   max-width: 640px;
 }
 
+.contact-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.contact-container h3,
+.contact-container p {
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .card {
     display: block;
