@@ -1,3 +1,88 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #263238;
+  --primary-light: #4f5b62;
+  --primary-dark: #000a12;
+  --secondary: #84ffff;
+  --secondary-light: #baffff;
+  --secondary-dark: #4bcbcc;
+}
+/* ===========================================
+            General layout & Typography
+    ===========================================
+*/
 body {
   font-family: 'Roboto', sans-serif;
+  color: #e8eaed;
+  background: var(--primary);
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  letter-spacing: 1px;
+}
+
+.title-container {
+  text-align: center;
+}
+.title-container h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  margin-bottom: 1em;
+}
+
+.title-description {
+  font-weight: 400;
+}
+.title-description__small {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* ===========================================
+                Checkbox styling
+    ===========================================
+*/
+
+input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+label {
+  display: flex;
+}
+
+label::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  border: 0.05em solid #e8eaed;
+}
+
+label:hover::before,
+input[type='checkbox']:hover + label::before {
+  background-color: var(--secondary-dark);
+}
+
+input[type='checkbox']:focus + label::before {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+input[type='checkbox']:checked + label::before {
+  content: '\002714';
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-dark);
 }
