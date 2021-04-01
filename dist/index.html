@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do or not to do?</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -13,22 +15,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="title-container">
+    <main class="main-container">
+      <div class="title-container row row__center">
+        <span class="material-icons md-48">done_all</span>
         <h1>Just do it!</h1>
+      </div>
+      <div class="title-description-container">
         <p class="title-description">
-          Add a task, write a short description, set a priority and give it a deadline
+          Create a project, add a task, write a short description, set a priority and give it a
+          deadline.
         </p>
         <p class="title-description__small">You can even add notes or a checklist.</p>
       </div>
-    </header>
-
-    <section class="card">
-      <form>
-        <input type="checkbox" class="checkbox" />
-        <label for="#">Checkbox</label>
-      </form>
-    </section>
+      <aside class="sidebar">
+        <div class="add-container row row__center" id="add-project">
+          <span class="material-icons md-36 add-sign"> add </span>
+          <h4 class="add-title">Add Project</h4>
+        </div>
+      </aside>
+      <section class="card">
+        <h3 class="card-title">Project Title</h3>
+        <form class="checkbox">
+          <input type="checkbox" id="checkbox-1" />
+          <label for="checkbox-1">Checkbox</label>
+        </form>
+      </section>
+    </main>
 
     <script src="bundle.js"></script>
   </body>

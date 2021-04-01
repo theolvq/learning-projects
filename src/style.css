@@ -2,6 +2,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -11,6 +13,7 @@
   --secondary: #84ffff;
   --secondary-light: #baffff;
   --secondary-dark: #4bcbcc;
+  --off-white: #e8eaed;
 }
 /* ===========================================
             General layout & Typography
@@ -18,31 +21,102 @@
 */
 body {
   font-family: 'Roboto', sans-serif;
-  color: #e8eaed;
+  color: var(--off-white);
   background: var(--primary);
   font-size: 1.25rem;
   line-height: 1.25rem;
   letter-spacing: 1px;
 }
 
-.title-container {
-  text-align: center;
-}
-.title-container h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  font-variant: small-caps;
-  letter-spacing: 0.1em;
-  margin-bottom: 1em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
 }
 
+.main-container {
+  display: grid;
+  grid-template-columns: minmax(350px, 30%) 1fr;
+  grid-template-rows: minmax(100px, 10%) 1fr;
+}
+.row {
+  display: flex;
+}
+
+.row__center {
+  align-items: center;
+}
+
+.title-container {
+  margin-bottom: 1em;
+}
+.title-container h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  font-variant: capitalize;
+  letter-spacing: 0.1em;
+}
+
+.title-description-container {
+  max-width: 960px;
+}
 .title-description {
   font-weight: 400;
+  margin: 0.5em 0;
 }
 .title-description__small {
   font-weight: 300;
   font-style: italic;
   font-size: 1rem;
+  margin: 0.25em 0;
+}
+
+/* ===========================================
+                Sidebar
+    ===========================================
+*/
+.add-container {
+  cursor: pointer;
+}
+
+.add-container:hover {
+  opacity: 0.75;
+}
+
+/* ===========================================
+                Material Icons
+    ===========================================
+*/
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* ===========================================
+                Card styling
+    ===========================================
+*/
+.card {
+  border: 1px solid var(--off-white);
+  max-width: 238px;
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+
+.card-title {
+  margin-top: 0;
 }
 
 /* ===========================================
@@ -56,23 +130,24 @@ input[type='checkbox'] {
   position: absolute;
 }
 
-label {
+.checkbox label {
   display: flex;
 }
 
-label::before {
+.checkbox label::before {
   content: '';
   width: 1em;
   height: 1em;
+  padding: 0.25em;
   border-radius: 0.15em;
   margin-right: 0.5em;
-  border: 0.05em solid #e8eaed;
+  border: 0.05em solid var(--off-white);
 }
 
-label:hover::before,
+/* label:hover::before,
 input[type='checkbox']:hover + label::before {
   background-color: var(--secondary-dark);
-}
+} */
 
 input[type='checkbox']:focus + label::before {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
@@ -80,9 +155,8 @@ input[type='checkbox']:focus + label::before {
 
 input[type='checkbox']:checked + label::before {
   content: '\002714';
-  background-color: var(--secondary);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--primary-dark);
+  color: var(--off-white);
 }
