@@ -9,6 +9,7 @@
 :root {
   --primary: #263238;
   --primary-light: #4f5b62;
+  --primary-lighter: #4f5b6244;
   --primary-dark: #000a12;
   --secondary: #84ffff;
   --secondary-light: #baffff;
@@ -145,15 +146,17 @@ aside {
 */
 .card {
   margin: 1em;
-  border: 2px solid var(--primary-dark);
+
   max-width: 238px;
   border-radius: 0.5em;
   padding: 1.5em;
+  background-color: #4f5b6244;
+  /* text-align: center; */
 }
 
-.card-title {
+/* .card-title {
   margin-top: 0;
-}
+} */
 
 /* ===========================================
                 Checkbox styling
@@ -174,19 +177,19 @@ input[type='checkbox'] {
   content: '';
   width: 1em;
   height: 1em;
-  padding: 0.25em;
   border-radius: 0.15em;
   margin-right: 0.5em;
-  border: 0.05em solid var(--off-white);
+  border: 0.1em solid var(--primary-dark);
 }
 
 label:hover::before,
 input[type='checkbox']:hover + label::before {
-  border: 0.05em solid var(--transparent-white);
+  border: 0.1em solid var(--primary-light);
+  box-shadow: 0 0 0.25em 0.25em #26323856;
 }
 
 input[type='checkbox']:focus + label::before {
-  border: 0.05em solid var(--transparent-white);
+  box-shadow: 0 0 0.25em 0.25em #26323856;
 }
 
 input[type='checkbox']:checked + label::before {
@@ -194,5 +197,6 @@ input[type='checkbox']:checked + label::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--off-white);
+  color: var(--secondary-light);
+  background-color: var(--primary-light);
 }
