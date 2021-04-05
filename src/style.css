@@ -22,7 +22,7 @@
 */
 body {
   font-family: 'Roboto', sans-serif;
-  color: var(--off-white);
+  color: var(--primary-dark);
   background: var(--primary);
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -38,10 +38,16 @@ h6 {
   margin: 0.5em 0;
 }
 
+.text__light {
+  color: var(--off-white);
+}
+
+.text__dark {
+  color: var(--primary-dark);
+}
+
 .main-container {
-  display: grid;
-  grid-template-columns: minmax(350px, 30%) 1fr;
-  grid-template-rows: minmax(100px, 10%) 80vh;
+  display: flex;
 }
 .row {
   display: flex;
@@ -52,7 +58,7 @@ h6 {
 }
 
 .title-container {
-  margin-bottom: 1em;
+  margin: 0.5em;
 }
 .title-container h1 {
   font-size: 3rem;
@@ -61,7 +67,7 @@ h6 {
   letter-spacing: 0.1em;
 }
 
-.title-description-container {
+/* .title-description-container {
   max-width: 960px;
   background-color: var(--primary-light);
 }
@@ -74,7 +80,7 @@ h6 {
   font-style: italic;
   font-size: 1rem;
   margin: 0.25em 0;
-}
+} */
 
 /* ===========================================
                 Sidebar
@@ -82,15 +88,26 @@ h6 {
 */
 aside {
   background-color: var(--primary-light);
-}
-.add-container {
-  cursor: pointer;
-  padding: 0.5em;
+  padding-right: 0.5em;
 }
 
-.add-container:hover {
+.btn__side:hover {
   background-color: var(--transparent-white);
   border-radius: 0 5em 5em 0;
+}
+
+.btn__side:focus {
+  outline: 2px solid var(--secondary-light);
+  border-radius: 0 5em 5em 0;
+}
+
+.btn__side {
+  background-color: var(--primary-light);
+  border: none;
+  cursor: pointer;
+  padding: 0.25em 1em;
+  margin: 0.75em 0;
+  white-space: nowrap;
 }
 
 /* ===========================================
@@ -100,6 +117,8 @@ aside {
 
 .main-section {
   background-color: var(--off-white);
+  min-height: 90vh;
+  width: 100%;
 }
 
 /* ===========================================
@@ -125,7 +144,8 @@ aside {
     ===========================================
 */
 .card {
-  border: 1px solid var(--off-white);
+  margin: 1em;
+  border: 2px solid var(--primary-dark);
   max-width: 238px;
   border-radius: 0.5em;
   padding: 1.5em;

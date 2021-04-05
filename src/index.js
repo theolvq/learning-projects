@@ -1,6 +1,8 @@
 import './style.css';
 import 'normalize.css';
+import { Project } from './modules/Project';
 
 const addProject = document.querySelector('#add-project');
 
-addProject.addEventListener('click');
+const todo = new Project('Todo App');
+todo.getName();
