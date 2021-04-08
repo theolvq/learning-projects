@@ -8,6 +8,7 @@
 
 :root {
   --primary: #263238;
+  --primary-alpha: #26323856;
   --primary-light: #4f5b62;
   --primary-lighter: #4f5b6244;
   --primary-dark: #000a12;
@@ -146,17 +147,16 @@ aside {
 */
 .card {
   margin: 1em;
-
   max-width: 238px;
   border-radius: 0.5em;
   padding: 1.5em;
-  background-color: #4f5b6244;
-  /* text-align: center; */
+  background-color: var(--primary-lighter);
+  box-shadow: 0 0 0.1em 0.1em var(--primary-light);
 }
 
-/* .card-title {
-  margin-top: 0;
-} */
+.card:hover {
+  box-shadow: 0 0 0.1em 0.1em var(--primary-dark);
+}
 
 /* ===========================================
                 Checkbox styling
@@ -171,6 +171,7 @@ input[type='checkbox'] {
 
 .checkbox label {
   display: flex;
+  margin-bottom: 0.5em;
 }
 
 .checkbox label::before {
@@ -180,16 +181,17 @@ input[type='checkbox'] {
   border-radius: 0.15em;
   margin-right: 0.5em;
   border: 0.1em solid var(--primary-dark);
+  text-decoration: none;
 }
 
 label:hover::before,
 input[type='checkbox']:hover + label::before {
   border: 0.1em solid var(--primary-light);
-  box-shadow: 0 0 0.25em 0.25em #26323856;
+  box-shadow: 0 0 0.25em 0.25em var(--primary-alpha);
 }
 
 input[type='checkbox']:focus + label::before {
-  box-shadow: 0 0 0.25em 0.25em #26323856;
+  box-shadow: 0 0 0.25em 0.25em var(--primary-alpha);
 }
 
 input[type='checkbox']:checked + label::before {

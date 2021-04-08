@@ -17,6 +17,7 @@ export class Project {
   }
 
   getTasks() {
+    console.log(this.tasks);
     return this.tasks;
   }
 
