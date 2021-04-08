@@ -12,6 +12,7 @@
   --primary-light: #4f5b62;
   --primary-lighter: #4f5b6244;
   --primary-dark: #000a12;
+  --primary-dark-alpha: #000a1248;
   --secondary: #84ffff;
   --secondary-light: #baffff;
   --secondary-dark: #4bcbcc;
@@ -26,7 +27,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-dark);
   background: var(--primary);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.25rem;
   letter-spacing: 1px;
 }
@@ -38,6 +39,22 @@ h4,
 h5,
 h6 {
   margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 .text__light {
@@ -201,4 +218,81 @@ input[type='checkbox']:checked + label::before {
   align-items: center;
   color: var(--secondary-light);
   background-color: var(--primary-light);
+}
+
+/* ===========================================
+                Overlay & Add-Project Form
+    ===========================================
+*/
+
+.overlay {
+  background-color: var(--primary-dark-alpha);
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: var(--primary-light);
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 1.5em;
+  color: var(--off-white);
+  box-shadow: 0 0 0.25em 0.25em var(--primary-dark-alpha);
+}
+
+.form-container:hover {
+  box-shadow: 0 0 0.35em 0.35em var(--primary-dark-alpha);
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-form > * {
+  margin-bottom: 0.75em;
+}
+
+.project-form input {
+  background-color: var(--off-white);
+  padding: 0.25em;
+  border-radius: 0.25em;
+  border: none;
+  color: var(--primary-dark);
+}
+
+.project-form input:focus {
+  outline: 2px solid var(--secondary-light);
+}
+
+.form--btn__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+.form--btn {
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  border: none;
+  color: var(--primary);
+}
+
+.form--btn:hover {
+  box-shadow: 0 0 0.25em 0.25em var(--primary-dark-alpha);
+}
+
+.form--btn__cancel {
+  background-color: var(--secondary-light);
+}
+
+.form--btn__add {
+  background-color: var(--secondary);
 }

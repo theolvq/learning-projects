@@ -8,7 +8,6 @@ export class Project {
   }
 
   getName() {
-    console.log(this.name);
     return this.name;
   }
 
@@ -17,7 +16,6 @@ export class Project {
   }
 
   getTasks() {
-    console.log(this.tasks);
     return this.tasks;
   }
 
