@@ -1,7 +1,7 @@
 import { Project } from './Project';
 import { Task } from './Task';
-const mainContainer = document.querySelector('#main-container');
-const addProject = document.querySelector('#add-project');
+const titleContainer = document.querySelector('.title-container');
+const createProjectBtn = document.querySelector('#add-project');
 
 export const renderTask = () => {
   const task = new Task();
@@ -11,7 +11,7 @@ export const renderTask = () => {
 export const openForm = () => {
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
-  document.body.insertBefore(overlay, mainContainer);
+  document.body.insertBefore(overlay, titleContainer);
 
   const formContainer = document.createElement('section');
   formContainer.classList.add('form-container');
@@ -50,7 +50,29 @@ export const openForm = () => {
   const addBtn = document.createElement('button');
   addBtn.classList.add('form--btn', 'form--btn__add');
   addBtn.innerText = 'Add';
+  addBtn.type = 'button';
   btnContainer.appendChild(addBtn);
 };
 
-addProject.addEventListener('click', openForm);
+export const submitForm = e => {
+  e.preventDefault;
+  if (e.target.classList.contains('form--btn__add')) {
+    const overlay = document.querySelector('.overlay');
+    const projectName = document.querySelector('#project-name').value;
+    const project = new Project(projectName);
+    document.body.removeChild(overlay);
+    console.log(project);
+  }
+};
+
+export const closeForm = e => {
+  e.preventDefault;
+  const overlay = document.querySelector('.overlay');
+  if (e.target.classList.contains('form--btn__cancel') || e.target === overlay) {
+    document.body.removeChild(overlay);
+  }
+};
+
+window.addEventListener('click', closeForm);
+createProjectBtn.addEventListener('click', openForm);
+window.addEventListener('click', submitForm);

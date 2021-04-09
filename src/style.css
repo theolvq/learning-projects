@@ -10,14 +10,15 @@
   --primary: #263238;
   --primary-alpha: #26323856;
   --primary-light: #4f5b62;
-  --primary-lighter: #4f5b6244;
+  --primary-light-alpha: #4f5b6244;
   --primary-dark: #000a12;
-  --primary-dark-alpha: #000a1248;
+  --primary-dark-alpha: #000a1281;
   --secondary: #84ffff;
   --secondary-light: #baffff;
   --secondary-dark: #4bcbcc;
   --off-white: #e8eaed;
   --transparent-white: rgba(255, 255, 255, 0.25);
+  --border-radius: 0.25rem;
 }
 /* ===========================================
             General layout & Typography
@@ -165,14 +166,15 @@ aside {
 .card {
   margin: 1em;
   max-width: 238px;
-  border-radius: 0.5em;
+  border-radius: 1em;
   padding: 1.5em;
-  background-color: var(--primary-lighter);
-  box-shadow: 0 0 0.1em 0.1em var(--primary-light);
+  background-color: var(--primary-light-alpha);
+  box-shadow: 0 0 0.25em 0.25em var(--primary-alpha);
+  transition: box-shadow 0.4s;
 }
 
 .card:hover {
-  box-shadow: 0 0 0.1em 0.1em var(--primary-dark);
+  box-shadow: 0 0 0.25em 0.25em var(--primary-dark-alpha);
 }
 
 /* ===========================================
@@ -232,21 +234,23 @@ input[type='checkbox']:checked + label::before {
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .form-container {
+  margin-top: 10rem;
   background-color: var(--primary-light);
   max-width: 400px;
   border-radius: 1em;
   padding: 1.5em;
   color: var(--off-white);
-  box-shadow: 0 0 0.25em 0.25em var(--primary-dark-alpha);
+  box-shadow: 0 0 0.25em 0.25em var(--primary-alpha);
+  transition: box-shadow 0.4s;
 }
 
 .form-container:hover {
-  box-shadow: 0 0 0.35em 0.35em var(--primary-dark-alpha);
+  box-shadow: 0 0 0.25em 0.25em var(--primary-dark-alpha);
 }
 
 .project-form {
@@ -262,8 +266,8 @@ input[type='checkbox']:checked + label::before {
 
 .project-form input {
   background-color: var(--off-white);
-  padding: 0.25em;
-  border-radius: 0.25em;
+  padding: 0.5em;
+  border-radius: 0.5rem;
   border: none;
   color: var(--primary-dark);
 }
@@ -279,6 +283,7 @@ input[type='checkbox']:checked + label::before {
   gap: 1em;
 }
 .form--btn {
+  cursor: pointer;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
   border: none;
