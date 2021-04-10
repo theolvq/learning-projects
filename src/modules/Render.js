@@ -2,6 +2,7 @@ import { Project } from './Project';
 import { Task } from './Task';
 const titleContainer = document.querySelector('.title-container');
 const createProjectBtn = document.querySelector('#add-project');
+const mainSection = document.querySelector('.main-section');
 
 export const renderTask = () => {
   const task = new Task();
@@ -55,20 +56,29 @@ export const openForm = () => {
 };
 
 export const submitForm = e => {
-  e.preventDefault;
   if (e.target.classList.contains('form--btn__add')) {
+    e.preventDefault();
     const overlay = document.querySelector('.overlay');
     const projectName = document.querySelector('#project-name').value;
     const project = new Project(projectName);
     document.body.removeChild(overlay);
+
+    const projectCard = document.createElement('section');
+    projectCard.classList.add('card');
+    mainSection.appendChild(projectCard);
+
+    const projecTitle = document.createElement('h4');
+    projecTitle.classList.add('text__dark');
+    projectCard.appendChild(projecTitle);
+    projecTitle.innerText = project.getName();
     console.log(project);
   }
 };
 
 export const closeForm = e => {
-  e.preventDefault;
   const overlay = document.querySelector('.overlay');
   if (e.target.classList.contains('form--btn__cancel') || e.target === overlay) {
+    e.preventDefault();
     document.body.removeChild(overlay);
   }
 };
