@@ -51,8 +51,17 @@ export const openForm = () => {
   const addBtn = document.createElement('button');
   addBtn.classList.add('form--btn', 'form--btn__add');
   addBtn.innerText = 'Add';
-  addBtn.type = 'button';
   btnContainer.appendChild(addBtn);
+};
+
+const addProjectToSidebar = () => {
+  const projectContainer = document.createElement('div');
+  projectContainer.classList.add()`    <div class="add-container" id="add-project">
+          <button class="btn__side row row__center text__light">
+            <span class="material-icons md-36 add-sign"> add </span>
+            <h4>Projects</h4>
+          </button>
+        </div>`;
 };
 
 export const submitForm = e => {
