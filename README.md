@@ -1,4 +1,4 @@
 # ETCH-A-SKETCH
 The Odin Project Assignement 
 
-Building a 16x16 grid using javscript
+Building the classic ETCH A SKETCH game that is resizable and colorful!
