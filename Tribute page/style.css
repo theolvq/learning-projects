@@ -1,0 +1,25 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#image {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  align-self: center;
+}

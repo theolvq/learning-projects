@@ -1,0 +1,163 @@
+/* font-weight: 200, 400, 800 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: #ffc93c;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffc93c;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5vh;
+  width: 100vw;
+  
+}
+
+.navlink {
+  color: #a2d5f2;
+  font-size: 2.2rem;
+  display: inline-block;
+  margin: 1.5em;
+  ;
+}
+
+.navlink:hover {
+  background: #40a8c4;
+  
+}
+
+#welcome-section {
+  background: #07689f;
+  font-size: 2.5em;
+  font-weight: 900;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section span {
+  font-weight: 100;
+  font-style: italic;
+}
+
+#projects {
+  background: #40a8c4;
+  height: 66.6666vh;
+  padding-top: 10vh;
+}
+
+#projects h2{
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+
+.container {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "emtpy project1 project2 empty"
+  "emtpy project3 project4 empty";
+  align-items: center;
+  align-content: center;
+
+  
+
+}
+
+.project-tile {
+  text-align: center;
+}
+
+#item-1 {
+  grid-area: project1;
+}
+
+#item-2{
+  grid-area: project2;
+}
+
+#item-3 {
+  grid-area: project3;
+}
+
+#item-4 {
+  grid-area: project4;
+}
+
+.project-tile a {
+  color: black;
+
+}
+
+.project-tile a:hover { 
+  color: gray;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #a2d5f2;
+  height: 33.3333vh;
+}
+
+#git {
+  width: 32px;
+  mix-blend-mode: multiply;
+}

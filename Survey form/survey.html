@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 id="title">I am the title</h1>
+        <p id="description">I describe what's going to happen</p>
+    </header>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name
+            <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+        </label>
+        <label for="email" id="email label">Email
+            <input type="email" name="email" id="email" placeholder="enter your email address" required>  
+        </label>
+        <label for="number" id="number-label">Age
+            <input type="number" name="age" id="number" placeholder="How old are you?" min="10" max="99">
+        </label>
+        <label for="occupation" id="dropdown-label">
+            <p>What is your occupation?</p>
+            <select name="occupation" id="dropdown">
+                <option value="student">Student</option>
+                <option value="full-time-job">Full time job</option>
+                <option value="full-time-leaner">Full time learner</option>
+                <option value="superhero">Parent</option>
+            </select>
+        </label>
+        <div id="radio">
+            <p>How likely are you to recommend our organization?</p>
+            <label for="likely" id="likely">likely
+                <input type="radio" name="likely">
+            </label>
+            <label for="not-likely">not likely
+                <input type="radio" name="not-likely">
+            </label>
+        </div>
+        <div id="checkbox">
+            <p>According to your experience what area could be improved?</p>
+            <label for="weather"> Weather
+                <input type="checkbox" value="weather">
+            </label>
+            <label for="forest">The Forest
+                <input type="checkbox" value="forest">
+            </label>
+            <label for="mountain">The Mountain
+                <input type="checkbox" value="mountain">
+            </label>
+        </div>
+        <div id="text-area">
+            <label for="feedback">
+                <textarea name="feedback" id="" cols="30" rows="10"></textarea>
+            </label>
+        </div>
+    </form>
+        
+     
+
+
+</body>
+</html>
