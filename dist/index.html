@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do or not to do?</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="title-container row row__center text__light">
+      <span class="material-icons md-48">done_all</span>
+      <h1>Just do it!</h1>
+    </div>
+    <main class="main-container" id="main-container">
+      <aside class="sidebar">
+        <div class="add-container" id="add-project">
+          <button class="btn__side row row__center text__light">
+            <span class="material-icons md-36 add-sign"> add </span>
+            <h4>Projects</h4>
+          </button>
+        </div>
+      </aside>
+      <section class="main-section">
+        <section class="card">
+          <h4 class="text__dark">Project Title</h4>
+          <form class="checkbox">
+            <input type="checkbox" id="checkbox-1" />
+            <label for="checkbox-1">Checkbox 1</label>
+            <input type="checkbox" id="checkbox-2" />
+            <label for="checkbox-2">Checkbox 2</label>
+            <input type="checkbox" id="checkbox-3" />
+            <label for="checkbox-3">Checkbox 3</label>
+            <input type="checkbox" id="checkbox-4" />
+            <label for="checkbox-4">Checkbox 4</label>
+            <input type="checkbox" id="checkbox-5" />
+            <label for="checkbox-5">Checkbox 5</label>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
