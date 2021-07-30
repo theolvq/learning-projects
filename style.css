@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 62.5%;
+	--btn-background: linear-gradient(to bottom, #167ccc 0%, #0077c5 100%);
+	--blue: #0077c5;
+	--text-color: rgb(57, 58, 61);
+	--bg-grey: rgb(236, 238, 241);
+	--border-grey: rgb(193, 197, 200);
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 300;
+	background-color: var(--bg-grey);
+	color: var(--text-color);
+	line-height: 1.8rem;
+}
+
+h2 {
+	font-size: 2.4rem;
+	font-weight: 400;
+	margin-bottom: 0.7em;
+}
+
+img {
+	width: 100%;
+}
+
+header {
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.5em;
+}
+
+main {
+	max-width: 380px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+form {
+	border: 1px solid var(--border-grey);
+	border-radius: 0.1em;
+	background: #fff;
+	text-align: center;
+
+	min-height: 600px;
+}
+
+form > * > * {
+	margin: 0 3rem;
+}
+
+input {
+	margin: 0.5em 0;
+	padding: 0.5em;
+	border-radius: 0.2em;
+	outline: none;
+	border: 1px solid var(--border-grey);
+}
+
+label {
+	margin-top: 1em;
+}
+
+fieldset {
+	border: 0;
+	text-align: left;
+}
+
+button {
+	margin: 1em 0;
+	cursor: pointer;
+	font-size: 2.1rem;
+	color: #fff;
+	padding: 0.5em 1em;
+	background: var(--btn-background);
+	border-radius: 0.1em;
+	border: var(--blue);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+}
+
+.flex-container {
+	display: flex;
+}
+
+.flex-container__col {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-container__space-around {
+	justify-content: space-around;
+}
+.flex-container__space-between {
+	justify-content: space-between;
+}
+.flex-container__center {
+	justify-content: center;
+	align-items: center;
+}
+
+.form-header {
+	margin-top: 2.5rem;
+}
+
+.disclaimer {
+	color: rgb(117, 117, 117);
+	font-style: italic;
+	font-size: 1.2rem;
+}
+
+.captcha {
+	background-color: var(--bg-grey);
+	font-size: 1rem;
+	height: 5rem;
+	padding: 1.8em 0;
+	color: rgb(141, 144, 150);
+}
+
+.legal-links {
+	margin: 2rem 2rem 0 2rem;
+}
+
+.legal-links a {
+	color: rgb(80, 80, 80);
+}
+
+footer {
+	padding: 2rem;
+	font-size: 1.2rem;
+	color: rgb(80, 80, 80);
+	text-align: center;
+}
