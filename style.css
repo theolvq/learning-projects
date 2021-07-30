@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--black: #121212;
+	--dark-grey: #333;
+	--middle-grey: #666;
+	--light-grey: #eee;
+	--border-color: rgb(226, 226, 226);
+	--blue: #326891;
+	--p-line-height: 1.875rem;
+	--p-font-size: 1.25rem;
+}
+
+a {
+	color: var(--blue);
+}
+
+body {
+	color: var(--dark-grey);
+	line-height: var(--p-line-height);
+	font-size: var(--p-font-size);
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+figure {
+	margin-bottom: 1.5rem;
+}
+img,
+figure {
+	width: 100%;
+}
+
+.logo {
+	max-width: 225px;
+}
+
+.flex-row {
+	display: flex;
+}
+
+header {
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--border-color);
+	height: 53px;
+	padding: 0 1rem;
+}
+
+h1 {
+	color: var(--dark);
+	text-transform: capitalize;
+	font-size: 2.5rem;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 3rem;
+	margin-bottom: 2rem;
+}
+
+.subtitle {
+	color: var(--dark-grey);
+	text-transform: capitalize;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.875rem;
+	margin-bottom: 0.9375rem;
+}
+
+.title-container {
+	padding: 3rem 0 3rem 0;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.sm-container {
+	border-top: 1px solid var(--border-color);
+	padding-top: 1em;
+}
+
+.sm-bg {
+	margin-right: 0.7em;
+	border-radius: 100%;
+	background-color: var(--light-grey);
+	width: 27px;
+	height: 27px;
+	padding: 0.8em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.article-container {
+	max-width: 600px;
+	margin: 0 auto;
+	font-size: 1.25rem;
+}
+
+.img-container {
+	margin: 0 auto;
+	max-width: 1200px;
+	color: var(--middle-grey);
+	font-size: 0.9375rem;
+	line-height: 1;
+	letter-spacing: 0.01em;
+}
+
+figcaption {
+	padding: 0.5em 1em;
+}
+
+.subscribe-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top: 2px solid var(--border-color);
+}
+
+.small-text {
+	font-size: 0.6rem;
+}
+
+.article-header {
+	margin: 0 auto;
+	color: var(--dark-grey);
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 600px;
+}
+
+.author {
+	font-weight: 700;
+	font-size: 0.9125rem;
+}
+
+.date {
+	font-weight: 500;
+	font-size: 0.8125rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr 1fr;
+}
+
+.inflation-theory {
+	width: 945px;
+	height: 753px;
+	background-image: url('./img/inflation-theory.png');
+	background-size: 100%;
+}
