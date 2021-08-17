@@ -9,7 +9,7 @@ const NotFound = () => {
     setTimeout(() => {
       router.push('/');
     }, 3000);
-  }, []);
+  }, []); //eslint-disable-line
   return (
     <div className='not-found'>
       <h1>Ooops...</h1>
