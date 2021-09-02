@@ -18,3 +18,5 @@ socket.on('chat message', (msg) => {
   messages.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
+
+document.querySelector('ul');
