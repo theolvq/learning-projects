@@ -1,0 +1,8 @@
+POST http://localhost:8888/api/createLinks
+Content-Type: application/json
+
+{
+  "url": "https://spacestagram.theoleveque.com",
+  "name": "Theo",
+  "description": "cool stuff"
+}

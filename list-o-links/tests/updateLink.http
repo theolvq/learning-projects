@@ -1,0 +1,10 @@
+PUT http://localhost:8888/api/updateLink
+Content-Type: application/json
+
+{
+  "name":"Theo's Website",
+  "url":"https:theoleveque.com",
+  "description":"This is Theo's personal website",
+  "_id":"312820601618169927",
+  "archived":false
+},
